@@ -157,4 +157,92 @@ public class LinkedList {
             temp = after;
         }
     }
+
+    public Node findMiddleNode(){
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public boolean hashLoop(){
+        Node slow = head;
+        Node fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public Node findKthNodeFromLast(int k){
+        Node slow = head;
+        Node fast = head;
+        for(int i=0;i<k;i++){
+            if(fast == null){
+                return null;
+            }
+            fast = fast.next;
+            while(fast != null){
+                slow = slow.next;
+                fast = fast.next;
+            }
+        }
+        return slow;
+    }
+    public void reverseBetween(int m, int n) {
+        // If the list is empty, there's nothing to reverse,
+        // so we exit from the function immediately
+        if (head == null) return;
+
+        // Create a dummy node, a common trick used in linked
+        // list problems to simplify the edge cases.
+        // This node doesn't hold any meaningful data.
+        Node dummy = new Node(0);
+        // The next node of the dummy node is set to the head,
+        // making dummy a pseudo-head of the list.
+        dummy.next = head;
+        // Initialize 'prev' as the dummy node. 'prev' will
+        // keep track of the node right before the segment
+        // to be reversed.
+        Node prev = dummy;
+
+        // Move 'prev' m steps forward in the list to make it
+        // point to the node right before the segment to be reversed
+        for (int i = 0; i < m; i++) {
+            prev = prev.next;
+        }
+
+        // 'current' will point to the first node of the segment
+        // that is to be reversed.
+        Node current = prev.next;
+        // This loop will reverse the segment. It runs for
+        // n - m times as that's the length of the segment.
+        for (int i = 0; i < n - m; i++) {
+            // 'temp' is the node right after 'current' that
+            // will be moved to the front of the segment.
+            Node temp = current.next;
+            // Link 'current' to the node after 'temp'
+            // effectively removing 'temp' from the segment.
+            current.next = temp.next;
+            // The next node of 'temp' is the node currently at
+            // the front of the segment, so 'temp' is placed
+            // right at the start of the segment.
+            temp.next = prev.next;
+            // Now, 'temp' becomes the first node of the reversed
+            // segment by setting the next of 'prev' to 'temp'.
+            prev.next = temp;
+        }
+
+        // After the loop, the segment is reversed but the head
+        // of the list is still pointing to the dummy node.
+        // So, update the head to point to the actual first node.
+        head = dummy.next;
+    }
 }

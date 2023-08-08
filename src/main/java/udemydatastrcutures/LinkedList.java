@@ -1,5 +1,8 @@
 package main.java.udemydatastrcutures;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LinkedList {
 
     class Node{
@@ -244,5 +247,23 @@ public class LinkedList {
         // of the list is still pointing to the dummy node.
         // So, update the head to point to the actual first node.
         head = dummy.next;
+    }
+
+    public void removeDuplicates() {
+        // Your implementation goes here
+        Set<Integer> values = new HashSet<>();
+        Node previous = null;
+        Node current = head;
+        while( current != null){
+            if(values.contains(current.value)){
+                previous.next = current.next;
+                length--;
+            }else{
+                values.add(current.value);
+                previous = current;
+            }
+            current = current.next;
+
+        }
     }
 }

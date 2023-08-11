@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b67e6261-358d-48d7-9bfc-de957569e1dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interview General Questions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/QueueImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/QueueMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/StackImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/bst/BinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/bst/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/HashTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/interviewquestions/StackUsingArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/EffectiveJavaNotes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/effectivejava/Item1/TestStaticFactoryMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/effectivejava/Item3/SingletonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interview General Questions" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Interview General Questions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/HashTable.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +44,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
   <component name="RunManager" selected="Application.main.java.udemydatastrcutures.hashset.Main">
@@ -154,7 +151,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/HashTable.java</url>
-          <line>25</line>
+          <line>22</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

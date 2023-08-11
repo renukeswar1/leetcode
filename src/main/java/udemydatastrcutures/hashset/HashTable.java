@@ -1,10 +1,7 @@
 package main.java.udemydatastrcutures.hashset;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class HashTable {
     private int size = 7;
@@ -80,5 +77,37 @@ public class HashTable {
             }
         }
         return duplicates;
+    }
+
+    public Character findFirstNonRepeatingCharacter(String s){
+        char[] chars = s.toCharArray();
+        Map<Character,Integer> numCounts = new HashMap<>();
+        for (char num : chars) {
+            numCounts.put(num, numCounts.getOrDefault(num, 0) + 1);
+        }
+        for(int i=0;i<chars.length;i++){
+            char c = s.charAt(i);
+            if(numCounts.get(c) ==1){
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public List<List<String>> groupAnangram(String[] s){
+        Map<String, List<String>> anagramGroups = new HashMap<>();
+        for(String str : s){
+            char[] chars = str.toCharArray();
+            Arrays.sort(chars);
+            String canonical = new String(chars);
+            if(anagramGroups.containsKey(canonical)){
+                anagramGroups.get(canonical).add(str);
+            }else {
+                List<String> group = new ArrayList<>();
+                group.add(str);
+                anagramGroups.put(canonical,group);
+            }
+        }
+        return new ArrayList<>(anagramGroups.values());
     }
 }

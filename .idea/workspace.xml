@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b67e6261-358d-48d7-9bfc-de957569e1dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interview General Questions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/QueueImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/QueueMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/StackImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/bst/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/bst/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/HashTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/interviewquestions/StackUsingArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/udemydatastrcutures/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,25 +39,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/renukeswarchinta/Downloads/leetcode-solutions/src&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/renukeswarchinta/Downloads/leetcode-solutions/src"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RotateArray">
-    <configuration name="BFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.algorithms.BFS" />
+  <component name="RunManager" selected="Application.main.java.udemydatastrcutures.hashset.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.udemydatastrcutures.Main" />
       <module name="leetcode-solutions" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java.algorithms.*" />
+          <option name="PATTERN" value="main.java.udemydatastrcutures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -54,12 +66,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RotateArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.existingclasses.RotateArray" />
+    <configuration name="QueueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.udemydatastrcutures.QueueMain" />
       <module name="leetcode-solutions" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.java.existingclasses.*" />
+          <option name="PATTERN" value="main.java.udemydatastrcutures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackUsingArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.udemydatastrcutures.interviewquestions.StackUsingArrayList" />
+      <module name="leetcode-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.udemydatastrcutures.interviewquestions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.java.udemydatastrcutures.bst.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.udemydatastrcutures.bst.Main" />
+      <module name="leetcode-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.udemydatastrcutures.bst.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.java.udemydatastrcutures.hashset.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.udemydatastrcutures.hashset.Main" />
+      <module name="leetcode-solutions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.udemydatastrcutures.hashset.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,8 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RotateArray" />
-        <item itemvalue="Application.BFS" />
+        <item itemvalue="Application.main.java.udemydatastrcutures.hashset.Main" />
+        <item itemvalue="Application.main.java.udemydatastrcutures.bst.Main" />
+        <item itemvalue="Application.StackUsingArrayList" />
+        <item itemvalue="Application.QueueMain" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -84,5 +138,26 @@
       <updated>1684850550383</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/udemydatastrcutures/interviewquestions/StackUsingArrayList.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/udemydatastrcutures/interviewquestions/StackUsingArrayList.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/udemydatastrcutures/hashset/HashTable.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

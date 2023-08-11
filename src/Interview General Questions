@@ -1,0 +1,10 @@
+Roles & repso
+    Invloving in requirement discussions, Epic/stories created based on requirements
+    Pick up the story
+    Understand the business logic and write the code
+    Write Junits
+    PR creations , review PRs
+    Merging the PR
+    Promote to all test environments
+    test the feature // check on splunk or cloudwatch for any issues
+

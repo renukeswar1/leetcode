@@ -94,20 +94,32 @@ public class HashTable {
         return null;
     }
 
-    public List<List<String>> groupAnangram(String[] s){
-        Map<String, List<String>> anagramGroups = new HashMap<>();
-        for(String str : s){
-            char[] chars = str.toCharArray();
-            Arrays.sort(chars);
-            String canonical = new String(chars);
-            if(anagramGroups.containsKey(canonical)){
-                anagramGroups.get(canonical).add(str);
-            }else {
-                List<String> group = new ArrayList<>();
-                group.add(str);
-                anagramGroups.put(canonical,group);
+    public static List<List<String>> groupAnangram(String[] strs){
+        List<List<String>> res = new ArrayList<>();
+        Map<String,List<String>> map = new HashMap<>();
+        for(String s: strs){
+            char[] st = s.toCharArray();
+            Arrays.sort(st);
+            String string = String.valueOf(st);
+            if(map.get(string) != null){
+                List<String> a = map.get(string);
+                a.add(s);
+                map.put(string,a);
+            }else{
+                List<String> list = new ArrayList<>();
+                list.add(s);
+                map.put(string,list);
             }
         }
-        return new ArrayList<>(anagramGroups.values());
+        for(Map.Entry<String,List<String>> entry : map.entrySet() ){
+            res.add(entry.getValue());
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        String[] str = {"eat","tea","tan","ate","nat","bat"};
+        List<List<String>> anagrams = groupAnangram(str);
+        System.out.println(anagrams);
     }
 }

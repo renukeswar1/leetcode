@@ -19,6 +19,41 @@ public class BinarySearchTree {
         }
         return false;
     }
+    public boolean rContains(int value){
+        return rContains(root,value);
+    }
+
+    //using recursive
+    private boolean rContains(Node rootNode, int value){
+        if(rootNode == null) return false;
+        if(rootNode.value == value) return true;
+        if(value < rootNode.value){
+            return rContains(rootNode.left,value);
+        }else{
+            return rContains(rootNode.right,value);
+        }
+    }
+
+    public Node rInsert(int value){
+        return rInsert(root,value);
+    }
+    private Node rInsert(Node currentNode,int value){
+        Node newNode = new Node(value);
+        if (root == null) return newNode;
+        if(value < currentNode.value){
+            currentNode.left = rInsert(currentNode.left,value);
+        }else if(value > currentNode.value){
+            currentNode.right = rInsert(currentNode.right,value);
+        }
+        return currentNode;
+    }
+
+    public int rMinimumvalue(Node currentNode){
+        while (currentNode.left != null){
+            currentNode = currentNode.left;
+        }
+        return currentNode.value;
+    }
     public boolean insert(int value){
         Node newNode = new Node(value);
         if(root == null){

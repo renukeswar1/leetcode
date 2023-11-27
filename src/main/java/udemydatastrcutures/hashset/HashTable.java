@@ -117,9 +117,34 @@ public class HashTable {
         return res;
     }
 
+    public static int[] topKFrequestNubers(int[] nums, int k){
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i:nums){
+            map.merge(i,1 ,Integer::sum);
+        }
+        List<Integer> list = new ArrayList<>(map.keySet());
+        list.sort((a,b) -> map.get(b) - map.get(a)); // Sort by frequency in descending order
+        int[] res = new int[k];
+        for(int i=0;i<k;i++){
+            res[i] = list.get(i);
+        }
+
+        for(Map.Entry<Integer,Integer> entry : map.entrySet()){
+            System.out.println(entry.getKey() +" "+ entry.getValue());
+        }
+        System.out.println();
+        list.stream().forEach(a ->System.out.println(a));
+        return res;
+    }
+
     public static void main(String[] args) {
         String[] str = {"eat","tea","tan","ate","nat","bat"};
         List<List<String>> anagrams = groupAnangram(str);
-        System.out.println(anagrams);
+      //  System.out.println(anagrams);
+        int[] res = topKFrequestNubers(new int[]{7,7,8,9,7,8,9,1,1,2,2,2,3,3,4},2);
+        System.out.println();
+        for(int a: res){
+            System.out.println(a);
+        }
     }
 }

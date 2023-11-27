@@ -1,9 +1,6 @@
-package main.java;
+package main.java.testexamples;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.*;
 
 public class Test {
@@ -61,7 +58,8 @@ public class Test {
         listOfPerson.forEach(
                 (person) -> System.out.println(" Person name : " + person.getName()));
 
-
+        Optional<Integer> reduce = Arrays.asList(12, 23, -9, 100).stream().reduce(Integer::min);
+        System.out.println(reduce.get());
 
     }
     class PersonDTO{

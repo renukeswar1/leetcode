@@ -1,0 +1,22 @@
+Enqueue: add
+Dequeue: remove
+Front: start of the queue
+Rear: end of the queue
+Types:
+    Simple queue
+    Double Ended Queue (Deque) : Elements are added or removed from both ends
+    Circular Queue: Last element points to first , making a loop
+    Priority Queue: In this type not all elements are equal , some are considered more important and get to jump to line
+    Affinity Queue: Evenry element has an affinity & is placed with an element having the same affinity; otherwise it
+                    is placed at the rear
+
+    Note: While working with Queues, it's easy to make a few common mistakes. The first mistake is forgetting to
+    check for Queue Overflow and Underflow conditions. Always remember to check if the Queue is full before
+    enqueueing and if it's empty before dequeuing
+
+    In the data structures Queues are used in below :
+        Breadth First Search
+        Caching
+        Asynchronous Data Transfer
+
+        Priority Queue : Also called as Heap

@@ -10,18 +10,18 @@ public class NextGreaterElement {
         System.out.println(Arrays.toString(nextGreaterElement.printNGE(arr)));
     }
 
-    public int[] printNGE(int arr[]) {
-        int n = arr.length;
-        Stack<Integer> s = new Stack<>();
+    public int[] printNGE(int inputArray[]) {
+        int n = inputArray.length;
+        Stack<Integer> stack = new Stack<>();
         int res[] = new int[n];
 
         for (int i = n - 1; i >= 0; i--) {
-            while (!s.empty() && s.peek() <= arr[i]) {
-                s.pop();
+            while (!stack.empty() && stack.peek() <= inputArray[i]) {
+                stack.pop();
             }
 
-            res[i] = s.empty() ? -1 : s.peek();
-            s.push(arr[i]);
+            res[i] = stack.empty() ? -1 : stack.peek();
+            stack.push(inputArray[i]);
         }
 
         return res;

@@ -1,0 +1,7 @@
+A linked list is a linear data structure where elements are stored in nodes, and each node points to the
+    next one in the sequence, forming a chain-like structure.
+
+Types of List:
+ Singly Linked List
+ Doubly Linked List
+ Circular Linked List

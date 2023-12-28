@@ -1,0 +1,112 @@
+We can't edit the specifications of running pod except below
+    spec.containers[*].image
+    spec.initContainers[*].image
+    spec.activeDeadlineSeconds
+    spec.tolerations
+We can't edit the environment variables, service accounts, resource limits of a running pod, then we
+have 2 options
+   1: k edit pod <pod name>
+     This will open the pod specification in an editor (vi editor). Then edit the required properties.
+     When you try to save it, you will be denied. This is because you are attempting to edit a field
+     on the pod that is not editable.
+    Delete the pod and recreate
+        kubectl delete pod webapp
+        kubectl create -f /tmp/kubectl-edit-ccvrq.yaml
+   2: The second option is to extract the pod definition in YAML format to a file using the command
+        kubectl get pod webapp -o yaml > my-new-pod.yaml
+      Make the changes and vi my-new-pod.yaml , delete the pod and kubectl delete pod webapp and recreate
+      kubectl create -f my-new-pod.yaml
+
+    Edit Deployments
+    With Deployments you can easily edit any field/property of the POD template.
+    Since the pod template is a child of the deployment specification,  with every change the deployment
+    will automatically delete and create a new pod with the new changes. So if you are asked to edit a
+    property of a POD part of a deployment you may do that simply by running the command
+
+    kubectl edit deployment my-deployment
+
+    ---------------------
+
+    static pod:
+        1: In any nodes static pod path is configured in config.yaml file, which is present inside /var/lib/kubelet
+        staticPodPath can be any path usaully it will be /etc/kubernets/manifests
+        2: If we need to create static pod then place yaml file in side this manifests folder.
+ -------------------------
+
+ Custom scheduler
+        1: create a custom configmap object with Custom Scheduler
+        2: create all service account and other objects which are required
+        3: create pod (custom scheduler) with config file
+
+-----------------------------
+
+DaemonSets:
+        1: these are running always in all nodes.ex: Logging,Monitoring pods
+        2: create yaml similar to deployment
+-----------------------------
+Resource Limits:
+        limit and requests are the two attributes we need to use while configuring pod
+        If we are not using proper limit then OMSKilled error occurs and pod does not create
+--------------------------------
+
+Scheduler Profiles
+We can set a priority for a pod we need to create Pod with Kind PriorityClass
+Based on protity value pods are filtered in the scheduler queue
+Scheuler Queue -->  Filtering(Where nodes gets filtered based on pod definition)   --> scoring  ---> Binding
+All above steps can be achived with the help of Plugins as below for each step for above
+PriorityQueue  -->   NodeResourceFit/NodeName/NodeUnschedulable                    --> NodeResourceFit--> DefaultBinder
+Above Pluigns are plugged to Extension points as shown below
+queuesort     --> filter       ---> score    ----> bind
+
+----------------------------------
+Loggingg and Monitoring
+    Node components logging and applicaiton level logging
+    Metric SErvice is In-Memory logging server to collect logs
+    Kubelet contains other component called cAdvisor which takes logging and exposes to kube-api-server
+    after installing metric server we check for
+        k top node and
+        k top pod           for node/pod metrics data
+    Applicaiton logging
+        to see live logs use -f in the docker/kublet command
+        docker logs -f <continer-name?
+        kubelet logs -f pod-name : if pod contains multiple continers then we have to specify container name
+        kubelet logs -f pod-name contianer-name
+-------------------------------------------------
+
+Application Lifecycle Management
+    A: Updates and Rollback
+       Deployment Strategies:
+        1: Recreate: down all servers and update new servers with new version . All at once
+        2: Rolling update: update one by one
+            If we are going to change image version then we can do in 2 days
+                a: Update the yaml file
+                b: k set image deploy nginx=nginx:1.3.4-- with this command also we can update the image version
+        3: If we see any thing wrong in new deployment then undo the old deployment
+            k rollout undo deploy/my-deploy
+            k rollout status deploy/my-deploy
+            k rollout history deploy.my-deploy
+    B: Configuring applications: Env varibales, arguments,
+        Docker : docker run ubuntu (continer runs the task and exits)
+        dockerfile:
+            FROM ubuntu
+            CMD sleep 5   or CMD ["sleep" , "5"]
+                        First argument should be an executable and parameters(in this case it is 5) should be saperated
+            when we run this docker file , container runs for 5 seconds and exit,if we want to increase or decrease
+            the number of seconds then we run -- docker run ubuntu-sleeper sleep 10
+                                                 in this case we are giving whole command (sleep as well as arguments)
+            If we give ENTRYPOINT["sleep"]
+                    then we run docker command only with seconds, in this case time will append to executable
+                    docker run ubutu-sleeper sleep 10
+                    if we forget to give timer 10 seconds then nothing will be appened to docker command so to solve this
+                    we need to give both ENTRYPOINT as well as CMD
+                    if we need to override entrypoint in docker command then run as below
+                        docker run --entrypoint=sleep-2 ubuntu-sleeper 10
+                    In K8S world --entrypoint in docker file corresponds to command in pod definition file
+                             and CMD corresponds to args["10"] in pod definition file
+
+
+
+
+
+
+

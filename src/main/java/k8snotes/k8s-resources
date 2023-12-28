@@ -1,0 +1,3 @@
+kubectl edit deployment my-deployment
+kubectl delete pod webapp
+kubectl create -f /tmp/kubectl-edit-ccvrq.yaml

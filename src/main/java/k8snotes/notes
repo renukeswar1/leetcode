@@ -103,6 +103,15 @@ Application Lifecycle Management
                         docker run --entrypoint=sleep-2 ubuntu-sleeper 10
                     In K8S world --entrypoint in docker file corresponds to command in pod definition file
                              and CMD corresponds to args["10"] in pod definition file
+---------------------------------------
+Environment variables:
+    Environment variables can set in pod with key value pairs or using configMap as well
+    k create configmap app-config --from-literal=APP=webapp
+    k create configmap app1 --from-file=app.properites
+    k create secret generic db-secret --from-literal DB_Host=sql01 --from-literal DB_User=root --from-literal DB_Password=password123
+
+
+
 
 
 

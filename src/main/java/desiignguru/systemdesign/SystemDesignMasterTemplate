@@ -1,0 +1,52 @@
+1: DNS
+
+2: Load Balancer:
+    Below are the algorithms:
+       a: RoundRobin
+       b: Less conneciton
+       c: IP Hash: Client's IP is hashed and resulting value is used to determine which server the request should
+       be redirected to . This method ensures that specific client's requests are consistently routed to same server,
+       helping to maintain session persistence
+3: API Gateway:
+    Primary functions of API Gateway:
+        1: Request Routing
+        2: Request and Response transformation
+        3: Caching
+        4: Load balance
+        5: Authoriazation & Authentiaction
+        6: Rate Limiting  and Throtling
+
+4: CDN
+5: Forward Proxy vs Reverse Proxy
+
+6:Caching:
+
+7: Data Partitioning:
+    In a database, horizontal partitioning, often referred to as sharding, entails dividing the rows of a
+    table into smaller tables and storing them on distinct servers or database instances.
+    This method is employed to distribute the database load across multiple servers, thereby enhancing performance.
+
+    Conversely, vertical partitioning involves splitting the columns of a table into separate tables.
+    This technique aims to reduce the column count in a table and boost the performance of queries that only
+    access a limited number of columns.
+
+8: Database Replication:
+9: Distributed Message System
+10: Microservices
+11: NoSQL : Document Based(Mongo,couchDB) ,
+            Key-VAlue(Redis,DynamoDB) ,
+            Column Family(HBase,Cassandra) ,
+            Graph- Based (Neo4j, Amazon Neptune)
+12: Database Index:
+        bitmap index
+        hash index
+        B-tree index
+13: Distributed File System
+14: Notification System
+15: Full text search
+16: Distributed Coordination services: Zookeeper,etcd ,and Consul
+17: Heartbeat
+18: Checksum: With checksum data will flow with out any corrupted data
+    this can be calculated with cryptographic functions like MD5 , SHA-1,SHA-256
+
+https://www.designgurus.io/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fdownload%2Fstorage%2Fv1%2Fb%2Fdesigngurus-prod.appspot.com%2Fo%2FdocImages%252F645d5161fff33a24ccce4bb1%252Fimg%3A2cc5e1-43e3-e654-a08-6bafde12eb0f.png%3Fgeneration%3D1683837530389537%26alt%3Dmedia&w=1920&q=75

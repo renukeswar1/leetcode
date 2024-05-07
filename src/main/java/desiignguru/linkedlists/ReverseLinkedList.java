@@ -14,11 +14,17 @@ public class ReverseLinkedList {
         }
         System.out.println();
     }
-    /*public static ListNode reverseLinkedList(ListNode head){
+    public static ListNode reverseLinkedList(ListNode head){
         ListNode current = head;
         ListNode prev = null;
-
-    }*/
+        while(current != null){
+           ListNode next = current.next;
+           current.next = prev;
+           prev = current;
+           current = next;
+        }
+        return prev;
+    }
     static class ListNode{
         int data;
         ListNode next;

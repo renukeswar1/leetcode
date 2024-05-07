@@ -18,7 +18,6 @@ public class PalindromeString {
             }
             isPalindrome = false;
             break;
-
         }
         return isPalindrome;
 
